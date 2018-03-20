@@ -18,6 +18,7 @@ interface ClassDictionary {
 interface ClassArray extends Array<ClassValue> {}
 
 export type ClassNameHOCProps = {
+	className?: string;
 	children: ReactElement<{
 		className?: string;
 	}>;
@@ -27,13 +28,13 @@ export interface ClassNameHOCFunction {
 	(...classes: ClassValue[]): StatelessComponent<ClassNameHOCProps>;
 }
 
-export const classNameHOC: ClassNameHOCFunction = (...classes) => ({ children }) => {
+export const classNameHOC: ClassNameHOCFunction = (...classes) => ({ children, className }) => {
 	if (!children) {
 		return null;
 	}
 	const child = Children.only(children);
 	const clone = cloneElement(child, {
-		className: classNames(child.props.className, classes),
+		className: classNames(child.props.className, className, classes),
 	});
 	return clone;
 };

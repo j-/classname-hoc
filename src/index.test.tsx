@@ -33,3 +33,21 @@ it('can have falsy children', () => {
 		)
 	}).not.toThrowError();
 });
+
+it('can stack', () => {
+	const Foo = classNameHOC('foo');
+	const Bar = classNameHOC('bar');
+	const Baz = classNameHOC('baz');
+	const container = mount(
+		<Foo>
+			<Bar>
+				<Baz>
+					<div />
+				</Baz>
+			</Bar>
+		</Foo>
+	);
+	expect(container.find('div').hasClass('foo')).toBeTruthy();
+	expect(container.find('div').hasClass('bar')).toBeTruthy();
+	expect(container.find('div').hasClass('baz')).toBeTruthy();
+});
