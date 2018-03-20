@@ -1,0 +1,66 @@
+{
+  "name": "classname-hoc",
+  "version": "0.1.0",
+  "description": "Apply class name to child components",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Jamie Hoeks <j@skeoh.com>",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/enzyme": "^3.1.9",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^22.2.0",
+    "@types/react": "^16.0.40",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "setupFiles": [
+      "./src/setupTests.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-/classname-hoc.git"
+  },
+  "keywords": [
+    "class",
+    "classname",
+    "classnames",
+    "react",
+    "dom",
+    "react-dom",
+    "hoc"
+  ],
+  "bugs": {
+    "url": "https://github.com/j-/classname-hoc/issues"
+  },
+  "homepage": "https://github.com/j-/classname-hoc#readme"
+}
