@@ -62,5 +62,9 @@
   "bugs": {
     "url": "https://github.com/j-/classname-hoc/issues"
   },
-  "homepage": "https://github.com/j-/classname-hoc#readme"
+  "homepage": "https://github.com/j-/classname-hoc#readme",
+  "files": [
+    "index.js",
+    "index.js.map"
+  ]
 }
