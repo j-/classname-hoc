@@ -17,7 +17,7 @@ Using
 returns a component class as an output. This component class will add the given
 class names to any children it renders.
 
-```tsx
+```jsx
 import classNameHOC from 'classname-hoc';
 
 const Rounded = classNameHOC('border-radius-10');
